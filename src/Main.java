@@ -4,7 +4,7 @@ public class Main {
 
         cuentaSofia.setIngreso(20000);
         cuentaSofia.setRetiro(50000);
-        cuentaSofia.getDatosCuenta();
+        System.out.println(cuentaSofia.getDatosCuenta());
         double saldo = cuentaSofia.getSaldoCuenta();
         System.out.println(saldo);
         }

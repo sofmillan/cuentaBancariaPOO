@@ -23,7 +23,7 @@ public class Cuenta {
         return this.saldoDeCuenta;
    }
 
-   public void getDatosCuenta(){
-       System.out.println(this.nombreDelTitular+" cuyo número de cuenta es "+this.numeroDeCuenta+" tiene un saldo de "+this.saldoDeCuenta+" pesos. " );
+   public String getDatosCuenta(){
+       return this.nombreDelTitular+" cuyo número de cuenta es "+this.numeroDeCuenta+" tiene un saldo de "+this.saldoDeCuenta+" pesos. ";
    }
 }
