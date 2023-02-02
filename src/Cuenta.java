@@ -12,11 +12,19 @@ public class Cuenta {
         this.numeroDeCuenta = (long)(Math.random()*100000+1);
     }
 
+    public boolean validarMonto(double monto){
+        return monto <= this.saldoDeCuenta;
+    }
     public void setIngreso(double ingreso) {
         this.saldoDeCuenta +=ingreso;
     }
     public void setRetiro(double retiro) {
-        this.saldoDeCuenta -=retiro;
+       if(this.validarMonto(retiro)) {
+           this.saldoDeCuenta -=retiro;
+       }else{
+           System.out.println("Fondos insuficientes");
+       }
+
     }
 
     public double getSaldoCuenta(){
@@ -26,4 +34,6 @@ public class Cuenta {
    public String getDatosCuenta(){
        return this.nombreDelTitular+" cuyo número de cuenta es "+this.numeroDeCuenta+" tiene un saldo de "+this.saldoDeCuenta+" pesos. ";
    }
+
+
 }
